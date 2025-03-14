@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights - Cake Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fff8e1;
+        }
+        nav {
+            background: #d2691e;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header {
+            padding: 50px;
+            background: #ffcc80;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #d2691e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .cakes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .cake {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .cake img {
+            width: 150px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cakes">Cakes</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Welcome to Sweet Delights</h1>
+        <p>Delicious cakes made with love!</p>
+        <button onclick="changeBackgroundColor()">Change Background</button>
+    </header>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We specialize in homemade cakes with the freshest ingredients.</p>
+    </section>
+    <section id="cakes">
+        <h2>Our Cakes</h2>
+        <div class="cakes">
+            <div class="cake">
+                <img src="cake1.jpg" alt="Chocolate Cake">
+                <p>Chocolate Delight</p>
+            </div>
+            <div class="cake">
+                <img src="cake2.jpg" alt="Vanilla Cake">
+                <p>Vanilla Dream</p>
+            </div>
+            <div class="cake">
+                <img src="cake3.jpg" alt="Strawberry Cake">
+                <p>Strawberry Bliss</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email us at sweetdelights@example.com</p>
+    </section>
+    <script>
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = 
+                '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+    </script>
+</body>
+</html>
